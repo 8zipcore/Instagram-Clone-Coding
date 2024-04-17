@@ -12,7 +12,7 @@ class LoginButton: UIButton {
     enum Style{
         case blue
         case lightblue
-        case gray
+        case lightgray
     }
 
     /*
@@ -42,17 +42,17 @@ class LoginButton: UIButton {
         switch style {
         case .blue:
             self.backgroundColor = RGB(red: 0, green: 100, blue: 224)
-            self.titleLabel?.textColor = .white
+            self.tintColor = .white
         case .lightblue:
             let lightBlue = RGB(red: 69, green: 153, blue: 254)
             self.layer.borderWidth = 1
             self.layer.borderColor = lightBlue.cgColor
-            self.titleLabel?.textColor = lightBlue
-        case .gray:
-            let gray = RGB(red: 69, green: 153, blue: 254)
+            self.tintColor = lightBlue
+        case .lightgray:
+            let lightGray = RGB(red: 70, green: 90, blue: 105)
             self.layer.borderWidth = 1
-            self.layer.borderColor = gray.cgColor
-            self.titleLabel?.textColor = gray
+            self.layer.borderColor = lightGray.cgColor
+            self.tintColor = .white
         }
     }
 

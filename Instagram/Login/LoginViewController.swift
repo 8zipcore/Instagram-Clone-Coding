@@ -38,13 +38,20 @@ class LoginViewController: UIViewController {
         
         pwTextView.secureTextEntryToggle()
         
+        loginButton.setTitle("로그인", for: .normal)
+        joinButton.setTitle("새 계정 만들기", for: .normal)
+        
         loginButton.setButton(.blue)
         joinButton.setButton(.lightblue)
 
     }
 
-    @IBAction func debugButtonTapped(_ sender: Any) {
+    @IBAction func joinButtonTapped(_ sender: Any) {
+        let joinVC = JoinViewController()
+        joinVC.modalPresentationStyle = .fullScreen
+        present(joinVC, animated: false)
     }
+    
 }
 
 extension LoginViewController: LoginTextViewDelegate{

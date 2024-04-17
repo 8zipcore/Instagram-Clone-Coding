@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JoinViewController" customModule="Instagram" customModuleProvider="target">
+            <connections>
+                <outlet property="contentLabel" destination="tht-FI-NN3" id="Hxh-Mc-jAY"/>
+                <outlet property="cpJoinButton" destination="BCw-aE-4m6" id="bgj-8M-80U"/>
+                <outlet property="emailTextView" destination="6Sc-bd-i6C" id="HD3-4n-sEc"/>
+                <outlet property="nextButton" destination="L1w-fd-XLt" id="70l-AR-e1Z"/>
+                <outlet property="titleLabel" destination="pCK-dP-kcw" id="DIT-9c-h3j"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLf-JJ-X7E">
+                    <rect key="frame" x="0.0" y="59" width="39.333333333333336" height="39.333333333333343"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="KLf-JJ-X7E" secondAttribute="height" multiplier="1:1" id="eCA-hO-zjC"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="back_btn"/>
+                    <connections>
+                        <action selector="backButtonTapped:" destination="-1" eventType="touchUpInside" id="n3g-lj-Ugf"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이메일 주소 입력" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pCK-dP-kcw">
+                    <rect key="frame" x="19.666666666666657" y="108.33333333333333" width="353.66666666666674" height="19.999999999999986"/>
+                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="회원님에게" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tht-FI-NN3">
+                    <rect key="frame" x="19.666666666666657" y="138.33333333333334" width="353.66666666666674" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Sc-bd-i6C" customClass="LoginTextView" customModule="Instagram" customModuleProvider="target">
+                    <rect key="frame" x="17.666666666666657" y="179.33333333333334" width="357.66666666666674" height="63"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="6Sc-bd-i6C" secondAttribute="height" multiplier="1031:182" id="Un6-5Y-Bx7"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1w-fd-XLt" customClass="LoginButton" customModule="Instagram" customModuleProvider="target">
+                    <rect key="frame" x="17.666666666666657" y="262.33333333333331" width="357.66666666666674" height="46.333333333333314"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="L1w-fd-XLt" secondAttribute="height" multiplier="1035:134" id="5Fa-cz-qdU"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="next"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BCw-aE-4m6" customClass="LoginButton" customModule="Instagram" customModuleProvider="target">
+                    <rect key="frame" x="17.666666666666657" y="318.66666666666669" width="357.66666666666674" height="46.333333333333314"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="BCw-aE-4m6" secondAttribute="height" multiplier="1035:134" id="oeB-DD-FON"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="phone"/>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.086048045089999997" green="0.1629758915" blue="0.2199970782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="L1w-fd-XLt" firstAttribute="top" secondItem="6Sc-bd-i6C" secondAttribute="bottom" constant="20" id="0AT-iK-GlG"/>
+                <constraint firstItem="pCK-dP-kcw" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="1gf-18-Nvc"/>
+                <constraint firstItem="6Sc-bd-i6C" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.91" id="6ks-2P-Kd4"/>
+                <constraint firstItem="KLf-JJ-X7E" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.1" id="9EO-jn-gq2"/>
+                <constraint firstItem="L1w-fd-XLt" firstAttribute="width" secondItem="6Sc-bd-i6C" secondAttribute="width" id="H6t-qg-Dyn"/>
+                <constraint firstItem="pCK-dP-kcw" firstAttribute="top" secondItem="KLf-JJ-X7E" secondAttribute="bottom" constant="10" id="JVw-4z-FPl"/>
+                <constraint firstItem="tht-FI-NN3" firstAttribute="centerX" secondItem="pCK-dP-kcw" secondAttribute="centerX" id="Pn7-rQ-EoJ"/>
+                <constraint firstItem="KLf-JJ-X7E" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Pun-tI-2ce"/>
+                <constraint firstItem="L1w-fd-XLt" firstAttribute="centerX" secondItem="6Sc-bd-i6C" secondAttribute="centerX" id="TV1-ID-gSC"/>
+                <constraint firstItem="BCw-aE-4m6" firstAttribute="centerX" secondItem="L1w-fd-XLt" secondAttribute="centerX" id="UiT-jv-4rc"/>
+                <constraint firstItem="pCK-dP-kcw" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.9" id="aPc-5i-0XH"/>
+                <constraint firstItem="BCw-aE-4m6" firstAttribute="top" secondItem="L1w-fd-XLt" secondAttribute="bottom" constant="10" id="e2K-uU-jjL"/>
+                <constraint firstItem="6Sc-bd-i6C" firstAttribute="centerX" secondItem="tht-FI-NN3" secondAttribute="centerX" id="ixb-ZV-HiW"/>
+                <constraint firstItem="tht-FI-NN3" firstAttribute="top" secondItem="pCK-dP-kcw" secondAttribute="bottom" constant="10" id="oB3-qV-J7u"/>
+                <constraint firstItem="KLf-JJ-X7E" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="sGR-mK-cMg"/>
+                <constraint firstItem="6Sc-bd-i6C" firstAttribute="top" secondItem="tht-FI-NN3" secondAttribute="bottom" constant="20" id="sbQ-R2-DLd"/>
+                <constraint firstItem="BCw-aE-4m6" firstAttribute="width" secondItem="L1w-fd-XLt" secondAttribute="width" id="xKS-Uo-37V"/>
+                <constraint firstItem="tht-FI-NN3" firstAttribute="leading" secondItem="pCK-dP-kcw" secondAttribute="leading" id="y0X-zb-JKv"/>
+                <constraint firstItem="tht-FI-NN3" firstAttribute="trailing" secondItem="pCK-dP-kcw" secondAttribute="trailing" id="yd9-AU-jWZ"/>
+            </constraints>
+            <point key="canvasLocation" x="27" y="-11"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="back_btn" width="12" height="21"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

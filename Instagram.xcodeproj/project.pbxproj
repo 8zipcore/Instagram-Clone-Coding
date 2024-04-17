@@ -16,6 +16,8 @@
 		3606F23D2BBBE10000561B0B /* LoginTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3606F23C2BBBE10000561B0B /* LoginTextView.swift */; };
 		3606F23F2BBBE50C00561B0B /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3606F23E2BBBE50C00561B0B /* Color.swift */; };
 		360CD7612BC3E8F30020A466 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360CD7602BC3E8F30020A466 /* Font.swift */; };
+		36651BC72BCFA463004B1AC6 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36651BC52BCFA463004B1AC6 /* JoinViewController.swift */; };
+		36651BC82BCFA463004B1AC6 /* JoinViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36651BC62BCFA463004B1AC6 /* JoinViewController.xib */; };
 		36A6F74E2BB6979C00497207 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A6F74D2BB6979C00497207 /* AppDelegate.swift */; };
 		36A6F7502BB6979C00497207 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A6F74F2BB6979C00497207 /* SceneDelegate.swift */; };
 		36A6F7572BB6979D00497207 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36A6F7562BB6979D00497207 /* Assets.xcassets */; };
@@ -57,6 +59,8 @@
 		3606F23C2BBBE10000561B0B /* LoginTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextView.swift; sourceTree = "<group>"; };
 		3606F23E2BBBE50C00561B0B /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		360CD7602BC3E8F30020A466 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		36651BC52BCFA463004B1AC6 /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
+		36651BC62BCFA463004B1AC6 /* JoinViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JoinViewController.xib; sourceTree = "<group>"; };
 		36A6F74A2BB6979C00497207 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36A6F74D2BB6979C00497207 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36A6F74F2BB6979C00497207 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +122,8 @@
 				3606F2342BBBD61100561B0B /* LoginViewController.xib */,
 				3606F23C2BBBE10000561B0B /* LoginTextView.swift */,
 				36EB2F452BC7BE160080361F /* LoginButton.swift */,
+				36651BC52BCFA463004B1AC6 /* JoinViewController.swift */,
+				36651BC62BCFA463004B1AC6 /* JoinViewController.xib */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -332,6 +338,7 @@
 			files = (
 				36A6F75A2BB6979D00497207 /* LaunchScreen.storyboard in Resources */,
 				36A6F7572BB6979D00497207 /* Assets.xcassets in Resources */,
+				36651BC82BCFA463004B1AC6 /* JoinViewController.xib in Resources */,
 				3606F2362BBBD61100561B0B /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,6 +473,7 @@
 				36A6F7832BB6987800497207 /* MainTabViewModel.swift in Sources */,
 				3606F2392BBBE03300561B0B /* Button.swift in Sources */,
 				36A6F74E2BB6979C00497207 /* AppDelegate.swift in Sources */,
+				36651BC72BCFA463004B1AC6 /* JoinViewController.swift in Sources */,
 				36A6F7502BB6979C00497207 /* SceneDelegate.swift in Sources */,
 				3606F23B2BBBE08100561B0B /* TextField.swift in Sources */,
 				360CD7612BC3E8F30020A466 /* Font.swift in Sources */,
