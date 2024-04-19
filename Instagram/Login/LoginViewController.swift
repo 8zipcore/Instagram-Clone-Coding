@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UIViewControllerTransitioningDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var idTextView: LoginTextView!
     @IBOutlet weak var pwTextView: LoginTextView!
@@ -24,6 +24,8 @@ class LoginViewController: UIViewController {
     }
     
     private func configureView(){
+        navigationController?.delegate = self
+        
         idTextView.loginTextViewDelegate = self
         pwTextView.loginTextViewDelegate = self
         
@@ -48,8 +50,25 @@ class LoginViewController: UIViewController {
 
     @IBAction func joinButtonTapped(_ sender: Any) {
         let joinVC = JoinViewController()
-        joinVC.modalPresentationStyle = .fullScreen
-        present(joinVC, animated: false)
+        self.navigationController?.pushViewController(joinVC, animated: true)
+    }
+    
+    func navigationController(
+        _ navigationController: UINavigationController,
+        animationControllerFor operation: UINavigationController.Operation,
+        from fromVC: UIViewController,
+        to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        switch operation{
+        case .none:
+            return nil
+        case .push:
+            return LoginPushAnimation()
+        case .pop:
+            return LoginPopAnimation()
+        @unknown default:
+            return nil
+        }
+       
     }
     
 }

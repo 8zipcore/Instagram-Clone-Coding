@@ -24,6 +24,8 @@ class JoinViewController: UIViewController {
     }
     
     private func configureView(){
+        navigationController?.isNavigationBarHidden = true
+        
         titleLabel.textColor = .white
         contentLabel.textColor = .white
         
@@ -50,7 +52,7 @@ class JoinViewController: UIViewController {
 
 
     @IBAction func backButtonTapped(_ sender: Any) {
-        self.dismiss(animated: false)
+        self.navigationController?.popViewController(animated: true)
     }
 }
 
