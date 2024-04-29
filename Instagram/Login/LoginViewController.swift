@@ -9,11 +9,17 @@ import UIKit
 
 class LoginViewController: UIViewController, UIViewControllerTransitioningDelegate, UINavigationControllerDelegate {
     
+    enum PopUpStyle{
+        case invalidPassword
+    }
+    
     @IBOutlet weak var idTextView: LoginTextView!
     @IBOutlet weak var pwTextView: LoginTextView!
     @IBOutlet weak var loginButton: LoginButton!
     @IBOutlet weak var findPWButton: UIButton!
     @IBOutlet weak var joinButton: LoginButton!
+    
+    private let loginViewModel = LoginViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,11 +51,11 @@ class LoginViewController: UIViewController, UIViewControllerTransitioningDelega
         
         loginButton.setButton(.blue)
         joinButton.setButton(.lightblue)
-
     }
 
     @IBAction func joinButtonTapped(_ sender: Any) {
         let joinVC = JoinViewController()
+        joinVC.viewType = .emailJoin
         self.navigationController?.pushViewController(joinVC, animated: true)
     }
     
@@ -71,6 +77,21 @@ class LoginViewController: UIViewController, UIViewControllerTransitioningDelega
        
     }
     
+    @IBAction func debugButtonTapped(_ sender: Any) {
+        
+    }
+    
+    private func showPopUp(_ style: PopUpStyle){
+        var popupVC = PopUpViewController()
+        popupVC.modalPresentationStyle = .overCurrentContext
+        
+        let popupText = loginViewModel.popupText(style)
+        popupVC.setText(title: popupText.title, message: popupText.message)
+        
+        popupVC.addButton(loginViewModel.actionText(.confirm), {})
+        
+        self.present(popupVC, animated: false)
+    }
 }
 
 extension LoginViewController: LoginTextViewDelegate{

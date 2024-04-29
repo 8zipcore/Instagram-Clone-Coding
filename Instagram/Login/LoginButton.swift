@@ -34,7 +34,7 @@ class LoginButton: UIButton {
     }
     
     private func initView(){
-        self.layer.cornerRadius = 20
+        self.layer.cornerRadius = 23
         self.titleLabel?.font = SDGothic(size: 16)
     }
     

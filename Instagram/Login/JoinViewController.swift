@@ -8,12 +8,34 @@
 import UIKit
 
 class JoinViewController: UIViewController {
-
+    
+    enum ViewType{
+        case emailJoin
+        case phoneNumberJoin
+        case emailVerification
+        case phoneNumberVerfication
+        case passwordGenerator
+    }
+    
+    enum PopUpStyle{
+        case login
+        case cancel
+    }
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
-    @IBOutlet weak var emailTextView: LoginTextView!
+    @IBOutlet weak var textView: LoginTextView!
+    @IBOutlet weak var notificationLabel: UILabel!
     @IBOutlet weak var nextButton: LoginButton!
-    @IBOutlet weak var cpJoinButton: LoginButton!
+    @IBOutlet weak var changeButton: LoginButton!
+    @IBOutlet weak var exitButton: UIButton!
+    
+    @IBOutlet weak var notificationLabelTopConstraint: NSLayoutConstraint!
+    
+    var viewType: ViewType?
+    var email: String?
+    var phoneNumber: String?
+    private var joinViewModel = JoinViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,47 +48,171 @@ class JoinViewController: UIViewController {
     private func configureView(){
         navigationController?.isNavigationBarHidden = true
         
+        textView.loginTextViewDelegate = self
+        
         titleLabel.textColor = .white
         contentLabel.textColor = .white
         
         titleLabel.font = SDGothicBold(size: 24)
         contentLabel.font = SDGothic(size: 15)
+        notificationLabel.font = SDGothic(size: 13)
         
         contentLabel.numberOfLines = 0
+        notificationLabel.numberOfLines = 0
         
-        titleLabel.text = "이메일 주소 입력"
-        contentLabel.text = "회원님에게 연락할 수 있는 이메일 주소를 입력하세요. 이 이메일 주소는 프로필에서 다른 사람에게 공개되지 않습니다."
-        
-        emailTextView.loginTextViewDelegate = self
-        
-        emailTextView.setPlaceHolderLabelText("이메일 주소")
-        emailTextView.setButtonImage(UIImage(systemName: "xmark")!)
-        emailTextView.setButtonHidden(true)
-        
-        nextButton.setTitle("다음", for: .normal)
-        cpJoinButton.setTitle("휴대폰 번호로 가입", for: .normal)
+        notificationLabel.textColor = RGB(red: 203, green: 210, blue: 217)
         
         nextButton.setButton(.blue)
-        cpJoinButton.setButton(.lightgray)
+        changeButton.setButton(.lightgray)
+        
+        exitButton.titleLabel?.font = SDGothic(size: 15)
+        exitButton.tintColor = RGB(red: 7, green: 165, blue: 250)
+        
+        setText()
     }
+    
+    private func setText(){
+        guard let viewType = viewType else { debugPrint("VieType Error"); return }
+        
+        let joinViewText = joinViewModel.text(viewType)
+                
+        titleLabel.text = joinViewText.title
+        contentLabel.text = joinViewText.content
+        
+        textView.setPlaceHolderLabelText(joinViewText.title)
+        textView.setButtonImage(viewType == .passwordGenerator ?
+                                UIImage(systemName: "eye.slash")! : UIImage(systemName: "xmark")!)
+        textView.setButtonHidden(true)
+        
+        if joinViewText.notificationText.count == 0{
+            notificationLabel.isHidden = true
+            notificationLabelTopConstraint.constant = 5
+        }
+        notificationLabel.text = joinViewText.notificationText
+        
+        nextButton.setTitle("다음", for: .normal)
+        
+        changeButton.isHidden = joinViewText.changeText.count == 0
+        changeButton.setTitle(joinViewText.changeText, for: .normal)
+        
+        exitButton.setTitle(joinViewText.exitText, for: .normal)
+    }
+    
+    private func showPopUpViewController(style: PopUpStyle){
+        let popupVC = PopUpViewController()
+        popupVC.modalPresentationStyle = .overCurrentContext
+        let popupText = joinViewModel.popupText(style)
+        popupVC.setText(title: popupText.title, message: popupText.message)
+        switch style{
+        case .login:
+            popupVC.addButton(joinViewModel.actionText(.login), {
+                self.navigationController?.popToRootViewController(animated: true)
+            })
+        case .cancel:
+            popupVC.addButton(joinViewModel.actionText(.stop), {
+                self.navigationController?.popToRootViewController(animated: true)
+            })
+        }
+        popupVC.addButton(joinViewModel.actionText(.cancel))
+        self.present(popupVC, animated: false)
+    }
+    
+}
 
-
+extension JoinViewController{
     @IBAction func backButtonTapped(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+        guard let viewType = viewType else { debugPrint("ViewType Error"); return }
+        switch viewType{
+        case .emailJoin: fallthrough
+        case .phoneNumberJoin:
+            showPopUpViewController(style: .cancel)
+        case .emailVerification: fallthrough
+        case .phoneNumberVerfication: fallthrough
+        case .passwordGenerator:
+            self.navigationController?.popViewController(animated: true)
+        }
+        
+    }
+    
+    @IBAction func nextButtonTapped(_ sender: Any) {
+        guard let viewType = viewType else { debugPrint("ViewType Error"); return }
+        
+        if viewType == .passwordGenerator {
+            return
+        }
+        
+        let joinVC = JoinViewController()
+        
+        switch viewType{
+        case .emailJoin:
+            joinVC.viewType = .emailVerification
+            joinVC.email = ""
+        case .phoneNumberJoin:
+            joinVC.viewType = .phoneNumberVerfication
+            joinVC.phoneNumber = ""
+        case .emailVerification: fallthrough
+        case .phoneNumberVerfication:
+            joinVC.viewType = .passwordGenerator
+        case .passwordGenerator:
+            break
+        }
+        
+        self.navigationController?.pushViewController(joinVC, animated: true)
+    }
+    
+    @IBAction func changeButtonTapped(_ sender: Any) {
+        guard let viewType = viewType else { debugPrint("VieType Error"); return }
+        
+        if viewType == .passwordGenerator {
+            return
+        }
+        
+        switch viewType{
+        case .emailJoin:
+            let joinVC = JoinViewController()
+            joinVC.viewType = .phoneNumberJoin
+            self.navigationController?.pushViewController(joinVC, animated: true)
+        case .phoneNumberJoin:
+            let joinVC = JoinViewController()
+            joinVC.viewType = .emailJoin
+            self.navigationController?.popViewController(animated: false)
+            self.navigationController?.pushViewController(joinVC, animated: true)
+        case .emailVerification:
+            let verificationVC = VerificationPopUpViewController()
+            verificationVC.addButton(joinViewModel.actionText(.resendVerficationCode), {
+                
+            })
+            verificationVC.addButton(joinViewModel.actionText(.changeEmailAddress), {
+                
+            })
+            verificationVC.addButton(joinViewModel.actionText(.phoneNumberVerfication), {
+                
+            })
+            self.present(verificationVC, animated: true)
+            break
+        case .phoneNumberVerfication:
+            break
+        case .passwordGenerator:
+            break
+        }
+    }
+    
+    @IBAction func exitButtonTapped(_ sender: Any) {
+        showPopUpViewController(style: .login)
     }
 }
 
 extension JoinViewController: LoginTextViewDelegate{
     func textFieldDidChange(_ sender: LoginTextView) {
         let textCount = sender.inputTextField.text?.count ?? 0
-        emailTextView.setButtonHidden(textCount == 0)
+        textView.setButtonHidden(textCount == 0)
     }
     
     func textFieldDidEndEditing(_ sender: LoginTextView) {
-        emailTextView.setButtonHidden(true)
+        textView.setButtonHidden(true)
     }
     
     func buttonTapped(_ sender: LoginTextView) {
-        emailTextView.resetTextField()
+        textView.resetTextField()
     }
 }

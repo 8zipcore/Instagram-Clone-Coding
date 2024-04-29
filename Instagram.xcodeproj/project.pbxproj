@@ -18,6 +18,10 @@
 		360CD7612BC3E8F30020A466 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360CD7602BC3E8F30020A466 /* Font.swift */; };
 		36651BC72BCFA463004B1AC6 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36651BC52BCFA463004B1AC6 /* JoinViewController.swift */; };
 		36651BC82BCFA463004B1AC6 /* JoinViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36651BC62BCFA463004B1AC6 /* JoinViewController.xib */; };
+		3694C0BB2BDB7FE300964852 /* VerificationPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3694C0B92BDB7FE300964852 /* VerificationPopUpViewController.swift */; };
+		3694C0BC2BDB7FE300964852 /* VerificationPopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3694C0BA2BDB7FE300964852 /* VerificationPopUpViewController.xib */; };
+		3694C0BE2BDB82FE00964852 /* VerificationPopUpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3694C0BD2BDB82FE00964852 /* VerificationPopUpTableViewCell.swift */; };
+		369B4E7C2BD7A5E100CE24A0 /* LoginNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369B4E7B2BD7A5E100CE24A0 /* LoginNavigationViewController.swift */; };
 		36A6F74E2BB6979C00497207 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A6F74D2BB6979C00497207 /* AppDelegate.swift */; };
 		36A6F7502BB6979C00497207 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A6F74F2BB6979C00497207 /* SceneDelegate.swift */; };
 		36A6F7572BB6979D00497207 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36A6F7562BB6979D00497207 /* Assets.xcassets */; };
@@ -28,7 +32,13 @@
 		36A6F77F2BB6984B00497207 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A6F77E2BB6984B00497207 /* MainViewController.swift */; };
 		36A6F7812BB6986A00497207 /* MainTabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A6F7802BB6986A00497207 /* MainTabItem.swift */; };
 		36A6F7832BB6987800497207 /* MainTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A6F7822BB6987800497207 /* MainTabViewModel.swift */; };
+		36CA5FDA2BD63F420080C29E /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CA5FD82BD63F420080C29E /* PopUpViewController.swift */; };
+		36CA5FDB2BD63F420080C29E /* PopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36CA5FD92BD63F420080C29E /* PopUpViewController.xib */; };
+		36CA5FDD2BD647C80080C29E /* ActionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CA5FDC2BD647C80080C29E /* ActionTableViewCell.swift */; };
+		36D52B732BD8D509009F0C12 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D52B722BD8D509009F0C12 /* LoginViewModel.swift */; };
+		36D52B752BD8D5E1009F0C12 /* PopUpText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D52B742BD8D5E1009F0C12 /* PopUpText.swift */; };
 		36D74A362BD23D630027A50E /* LoginViewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D74A352BD23D630027A50E /* LoginViewAnimation.swift */; };
+		36D74A382BD251680027A50E /* JoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D74A372BD251680027A50E /* JoinViewModel.swift */; };
 		36EB2F462BC7BE160080361F /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EB2F452BC7BE160080361F /* LoginButton.swift */; };
 		36F4E37A2BBAA1D000BAB820 /* MainTabCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F4E3792BBAA1D000BAB820 /* MainTabCollectionViewCell.swift */; };
 		C551134D2331A37B761BACBE /* Pods_InstagramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8910A16C81A5B93A903E3B76 /* Pods_InstagramTests.framework */; };
@@ -62,6 +72,10 @@
 		360CD7602BC3E8F30020A466 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		36651BC52BCFA463004B1AC6 /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
 		36651BC62BCFA463004B1AC6 /* JoinViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JoinViewController.xib; sourceTree = "<group>"; };
+		3694C0B92BDB7FE300964852 /* VerificationPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationPopUpViewController.swift; sourceTree = "<group>"; };
+		3694C0BA2BDB7FE300964852 /* VerificationPopUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VerificationPopUpViewController.xib; sourceTree = "<group>"; };
+		3694C0BD2BDB82FE00964852 /* VerificationPopUpTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationPopUpTableViewCell.swift; sourceTree = "<group>"; };
+		369B4E7B2BD7A5E100CE24A0 /* LoginNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNavigationViewController.swift; sourceTree = "<group>"; };
 		36A6F74A2BB6979C00497207 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36A6F74D2BB6979C00497207 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36A6F74F2BB6979C00497207 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,7 +90,13 @@
 		36A6F77E2BB6984B00497207 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		36A6F7802BB6986A00497207 /* MainTabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabItem.swift; sourceTree = "<group>"; };
 		36A6F7822BB6987800497207 /* MainTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewModel.swift; sourceTree = "<group>"; };
+		36CA5FD82BD63F420080C29E /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
+		36CA5FD92BD63F420080C29E /* PopUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopUpViewController.xib; sourceTree = "<group>"; };
+		36CA5FDC2BD647C80080C29E /* ActionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionTableViewCell.swift; sourceTree = "<group>"; };
+		36D52B722BD8D509009F0C12 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		36D52B742BD8D5E1009F0C12 /* PopUpText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpText.swift; sourceTree = "<group>"; };
 		36D74A352BD23D630027A50E /* LoginViewAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewAnimation.swift; sourceTree = "<group>"; };
+		36D74A372BD251680027A50E /* JoinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewModel.swift; sourceTree = "<group>"; };
 		36EB2F452BC7BE160080361F /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		36F4E3792BBAA1D000BAB820 /* MainTabCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabCollectionViewCell.swift; sourceTree = "<group>"; };
 		541589DFF8BC93DFDB2843A6 /* Pods-Instagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram.release.xcconfig"; path = "Target Support Files/Pods-Instagram/Pods-Instagram.release.xcconfig"; sourceTree = "<group>"; };
@@ -127,6 +147,16 @@
 				36651BC52BCFA463004B1AC6 /* JoinViewController.swift */,
 				36651BC62BCFA463004B1AC6 /* JoinViewController.xib */,
 				36D74A352BD23D630027A50E /* LoginViewAnimation.swift */,
+				36D74A372BD251680027A50E /* JoinViewModel.swift */,
+				36CA5FD82BD63F420080C29E /* PopUpViewController.swift */,
+				36CA5FD92BD63F420080C29E /* PopUpViewController.xib */,
+				36CA5FDC2BD647C80080C29E /* ActionTableViewCell.swift */,
+				369B4E7B2BD7A5E100CE24A0 /* LoginNavigationViewController.swift */,
+				36D52B722BD8D509009F0C12 /* LoginViewModel.swift */,
+				36D52B742BD8D5E1009F0C12 /* PopUpText.swift */,
+				3694C0B92BDB7FE300964852 /* VerificationPopUpViewController.swift */,
+				3694C0BA2BDB7FE300964852 /* VerificationPopUpViewController.xib */,
+				3694C0BD2BDB82FE00964852 /* VerificationPopUpTableViewCell.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -340,6 +370,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				36A6F75A2BB6979D00497207 /* LaunchScreen.storyboard in Resources */,
+				3694C0BC2BDB7FE300964852 /* VerificationPopUpViewController.xib in Resources */,
+				36CA5FDB2BD63F420080C29E /* PopUpViewController.xib in Resources */,
 				36A6F7572BB6979D00497207 /* Assets.xcassets in Resources */,
 				36651BC82BCFA463004B1AC6 /* JoinViewController.xib in Resources */,
 				3606F2362BBBD61100561B0B /* LoginViewController.xib in Resources */,
@@ -470,6 +502,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3694C0BE2BDB82FE00964852 /* VerificationPopUpTableViewCell.swift in Sources */,
 				3606F2352BBBD61100561B0B /* LoginViewController.swift in Sources */,
 				36A6F77F2BB6984B00497207 /* MainViewController.swift in Sources */,
 				3606F23F2BBBE50C00561B0B /* Color.swift in Sources */,
@@ -478,13 +511,20 @@
 				36D74A362BD23D630027A50E /* LoginViewAnimation.swift in Sources */,
 				36A6F74E2BB6979C00497207 /* AppDelegate.swift in Sources */,
 				36651BC72BCFA463004B1AC6 /* JoinViewController.swift in Sources */,
+				36D52B732BD8D509009F0C12 /* LoginViewModel.swift in Sources */,
 				36A6F7502BB6979C00497207 /* SceneDelegate.swift in Sources */,
 				3606F23B2BBBE08100561B0B /* TextField.swift in Sources */,
+				36CA5FDA2BD63F420080C29E /* PopUpViewController.swift in Sources */,
+				36CA5FDD2BD647C80080C29E /* ActionTableViewCell.swift in Sources */,
+				36D74A382BD251680027A50E /* JoinViewModel.swift in Sources */,
+				369B4E7C2BD7A5E100CE24A0 /* LoginNavigationViewController.swift in Sources */,
 				360CD7612BC3E8F30020A466 /* Font.swift in Sources */,
 				36A6F7812BB6986A00497207 /* MainTabItem.swift in Sources */,
+				3694C0BB2BDB7FE300964852 /* VerificationPopUpViewController.swift in Sources */,
 				36F4E37A2BBAA1D000BAB820 /* MainTabCollectionViewCell.swift in Sources */,
 				3606F23D2BBBE10000561B0B /* LoginTextView.swift in Sources */,
 				36EB2F462BC7BE160080361F /* LoginButton.swift in Sources */,
+				36D52B752BD8D5E1009F0C12 /* PopUpText.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

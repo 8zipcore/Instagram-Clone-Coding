@@ -20,8 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
           
         let window = UIWindow(windowScene: windowScene)
         let loginViewController = LoginViewController()
-        let navigationController = UINavigationController(rootViewController: loginViewController)
-        navigationController.view.backgroundColor = RGB(red: 22, green: 42, blue: 56)
+        let navigationController = LoginNavigationViewController(rootViewController: loginViewController)
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
         self.window = window
