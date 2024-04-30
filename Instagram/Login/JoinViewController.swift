@@ -21,7 +21,8 @@ class JoinViewController: UIViewController {
         case login
         case cancel
     }
-    
+
+    @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var textView: LoginTextView!
@@ -31,6 +32,7 @@ class JoinViewController: UIViewController {
     @IBOutlet weak var exitButton: UIButton!
     
     @IBOutlet weak var notificationLabelTopConstraint: NSLayoutConstraint!
+    var loadingView = JoinVCLoadingView()
     
     var viewType: ViewType?
     var email: String?
@@ -41,14 +43,28 @@ class JoinViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+        addLoadingView()
         configureView()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        showLoadingAnimation()
+    }
+    
+    private func addLoadingView(){
+        loadingView = JoinVCLoadingView(frame: contentView.frame)
+        self.view.addSubview(loadingView)
+        self.contentView.alpha = 0
     }
     
     private func configureView(){
         navigationController?.isNavigationBarHidden = true
         
         textView.loginTextViewDelegate = self
+        
+        contentView.backgroundColor = .clear
         
         titleLabel.textColor = .white
         contentLabel.textColor = .white
@@ -70,7 +86,7 @@ class JoinViewController: UIViewController {
         
         setText()
     }
-    
+        
     private func setText(){
         guard let viewType = viewType else { debugPrint("VieType Error"); return }
         
@@ -97,6 +113,17 @@ class JoinViewController: UIViewController {
         
         exitButton.setTitle(joinViewText.exitText, for: .normal)
     }
+}
+
+extension JoinViewController{
+    private func showLoadingAnimation(){
+        UIView.animate(withDuration: 0.15, animations:{
+            self.loadingView.alpha = 0
+            self.contentView.alpha = 1
+        }, completion: { _ in
+            self.loadingView.removeFromSuperview()
+        })
+    }
     
     private func showPopUpViewController(style: PopUpStyle){
         let popupVC = PopUpViewController()
@@ -116,7 +143,6 @@ class JoinViewController: UIViewController {
         popupVC.addButton(joinViewModel.actionText(.cancel))
         self.present(popupVC, animated: false)
     }
-    
 }
 
 extension JoinViewController{

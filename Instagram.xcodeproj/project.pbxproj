@@ -32,6 +32,7 @@
 		36A6F77F2BB6984B00497207 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A6F77E2BB6984B00497207 /* MainViewController.swift */; };
 		36A6F7812BB6986A00497207 /* MainTabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A6F7802BB6986A00497207 /* MainTabItem.swift */; };
 		36A6F7832BB6987800497207 /* MainTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A6F7822BB6987800497207 /* MainTabViewModel.swift */; };
+		36C2586B2BDF80E0002B92BC /* JoinVCLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C2586A2BDF80E0002B92BC /* JoinVCLoadingView.swift */; };
 		36CA5FDA2BD63F420080C29E /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CA5FD82BD63F420080C29E /* PopUpViewController.swift */; };
 		36CA5FDB2BD63F420080C29E /* PopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36CA5FD92BD63F420080C29E /* PopUpViewController.xib */; };
 		36CA5FDD2BD647C80080C29E /* ActionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CA5FDC2BD647C80080C29E /* ActionTableViewCell.swift */; };
@@ -90,6 +91,7 @@
 		36A6F77E2BB6984B00497207 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		36A6F7802BB6986A00497207 /* MainTabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabItem.swift; sourceTree = "<group>"; };
 		36A6F7822BB6987800497207 /* MainTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewModel.swift; sourceTree = "<group>"; };
+		36C2586A2BDF80E0002B92BC /* JoinVCLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinVCLoadingView.swift; sourceTree = "<group>"; };
 		36CA5FD82BD63F420080C29E /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		36CA5FD92BD63F420080C29E /* PopUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopUpViewController.xib; sourceTree = "<group>"; };
 		36CA5FDC2BD647C80080C29E /* ActionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionTableViewCell.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				3694C0B92BDB7FE300964852 /* VerificationPopUpViewController.swift */,
 				3694C0BA2BDB7FE300964852 /* VerificationPopUpViewController.xib */,
 				3694C0BD2BDB82FE00964852 /* VerificationPopUpTableViewCell.swift */,
+				36C2586A2BDF80E0002B92BC /* JoinVCLoadingView.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -522,6 +525,7 @@
 				36A6F7812BB6986A00497207 /* MainTabItem.swift in Sources */,
 				3694C0BB2BDB7FE300964852 /* VerificationPopUpViewController.swift in Sources */,
 				36F4E37A2BBAA1D000BAB820 /* MainTabCollectionViewCell.swift in Sources */,
+				36C2586B2BDF80E0002B92BC /* JoinVCLoadingView.swift in Sources */,
 				3606F23D2BBBE10000561B0B /* LoginTextView.swift in Sources */,
 				36EB2F462BC7BE160080361F /* LoginButton.swift in Sources */,
 				36D52B752BD8D5E1009F0C12 /* PopUpText.swift in Sources */,

@@ -9,6 +9,8 @@ import UIKit
 
 class VerificationPopUpViewController: UIViewController {
 
+    @IBOutlet weak var loadingView: UIView!
+    @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tableViewHeightConstraint: NSLayoutConstraint!
@@ -20,8 +22,20 @@ class VerificationPopUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        addLoadingView()
         configureView()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        showLoadingAnimation()
+    }
+    
+    private func addLoadingView(){
+        let view = JoinVCLoadingView(frame: loadingView.bounds)
+        self.loadingView.addSubview(view)
+        tableView.alpha = 0
     }
     
     private func configureView(){
@@ -48,11 +62,22 @@ class VerificationPopUpViewController: UIViewController {
         backgroundView.clipsToBounds = true
         
         tableViewHeightConstraint.constant = cellHeight * CGFloat(buttonTitleArray.count)
+        
+        loadingView.backgroundColor = .clear
     }
     
     func addButton(_ title: String, _ action:@escaping () -> Void){
         buttonTitleArray.append(title)
         buttonActionArray.append(action)
+    }
+    
+    private func showLoadingAnimation(){
+        UIView.animate(withDuration: 0.14, animations:{
+            self.loadingView.alpha = 0
+            self.tableView.alpha = 1
+        }, completion: { _ in
+            self.loadingView.removeFromSuperview()
+        })
     }
     
     @IBAction func closeButtonTapped(_ sender: Any) {

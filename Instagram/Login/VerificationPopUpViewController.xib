@@ -11,6 +11,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VerificationPopUpViewController" customModule="Instagram" customModuleProvider="target">
             <connections>
                 <outlet property="backgroundView" destination="oso-HJ-63D" id="73h-kp-c5r"/>
+                <outlet property="contentView" destination="flT-1p-S8K" id="uPt-qC-NRD"/>
+                <outlet property="loadingView" destination="pHd-ZR-GAh" id="OTQ-yc-OnT"/>
                 <outlet property="tableView" destination="TiN-sp-CNX" id="qOX-jt-nRy"/>
                 <outlet property="tableViewHeightConstraint" destination="HP4-b7-7fC" id="x1h-tH-IAE"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -40,6 +42,10 @@
                                 <action selector="closeButtonTapped:" destination="-1" eventType="touchUpInside" id="zRQ-DW-1y5"/>
                             </connections>
                         </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pHd-ZR-GAh">
+                            <rect key="frame" x="11.666666666666657" y="77.333333333333343" width="369.66666666666674" height="505.33333333333326"/>
+                            <color key="backgroundColor" red="0.29442487346728918" green="0.12312594969076311" blue="0.57686871859296485" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </view>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="TiN-sp-CNX">
                             <rect key="frame" x="19.666666666666657" y="82.333333333333314" width="353.66666666666674" height="60"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -52,9 +58,12 @@
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="oso-HJ-63D" secondAttribute="bottom" id="7Kr-OK-lZ4"/>
                         <constraint firstItem="TiN-sp-CNX" firstAttribute="width" secondItem="flT-1p-S8K" secondAttribute="width" multiplier="0.9" id="Bex-uh-or7"/>
+                        <constraint firstItem="pHd-ZR-GAh" firstAttribute="width" secondItem="flT-1p-S8K" secondAttribute="width" multiplier="0.94" id="CTs-5I-sIU"/>
+                        <constraint firstItem="pHd-ZR-GAh" firstAttribute="top" secondItem="QtK-fm-bv7" secondAttribute="bottom" constant="25" id="DBR-e5-wC8"/>
                         <constraint firstItem="oso-HJ-63D" firstAttribute="leading" secondItem="flT-1p-S8K" secondAttribute="leading" id="NOh-kG-zv0"/>
                         <constraint firstItem="TiN-sp-CNX" firstAttribute="centerX" secondItem="flT-1p-S8K" secondAttribute="centerX" id="NbL-wR-Is6"/>
                         <constraint firstAttribute="trailing" secondItem="oso-HJ-63D" secondAttribute="trailing" id="O7K-Qs-Bhu"/>
+                        <constraint firstItem="pHd-ZR-GAh" firstAttribute="centerX" secondItem="flT-1p-S8K" secondAttribute="centerX" id="ZWB-Yk-gsy"/>
                         <constraint firstItem="oso-HJ-63D" firstAttribute="top" secondItem="flT-1p-S8K" secondAttribute="top" id="cb4-M0-17z"/>
                         <constraint firstItem="TiN-sp-CNX" firstAttribute="top" secondItem="QtK-fm-bv7" secondAttribute="bottom" constant="30" id="gQf-LF-uUo"/>
                         <constraint firstItem="QtK-fm-bv7" firstAttribute="leading" secondItem="flT-1p-S8K" secondAttribute="leading" constant="15" id="hNg-Hs-9Nd"/>
@@ -65,6 +74,7 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="pHd-ZR-GAh" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="-65" id="956-mh-yi6"/>
                 <constraint firstItem="flT-1p-S8K" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Oas-I1-AwU"/>
                 <constraint firstItem="flT-1p-S8K" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.8" id="n3h-pl-Xfv"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="flT-1p-S8K" secondAttribute="trailing" id="u70-gN-g7G"/>
@@ -79,7 +89,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBrownColor">
-            <color red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

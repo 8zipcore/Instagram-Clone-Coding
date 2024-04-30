@@ -75,25 +75,25 @@ class LoginTextView: UIView {
         self.addSubview(trailingButton)
         self.addSubview(inputTextField)
         
-        let horizonalMargin = self.bounds.size.width * 0.04
+        let horizontalMargin = self.bounds.size.width * 0.04
         let verticalMargin = self.bounds.size.height * 0.18
         
         placeHolderLabel.snp.makeConstraints{ make in
-            make.leading.equalTo(self).inset(horizonalMargin)
-            make.trailing.equalTo(self).inset(horizonalMargin)
+            make.leading.equalTo(self).inset(horizontalMargin)
+            make.trailing.equalTo(self).inset(horizontalMargin)
             make.centerY.equalToSuperview()
         }
         
         trailingButton.snp.makeConstraints{ make in
             make.leading.equalTo(inputTextField.snp.trailing).offset(10)
-            make.trailing.equalTo(self).inset(horizonalMargin)
+            make.trailing.equalTo(self).inset(horizontalMargin)
             make.centerY.equalToSuperview()
         }
         
         smallPlaceHolderLabel.snp.makeConstraints{ make in
             make.top.equalTo(self).inset(verticalMargin)
-            make.leading.equalTo(self).inset(horizonalMargin)
-            make.trailing.equalTo(self).inset(horizonalMargin)
+            make.leading.equalTo(self).inset(horizontalMargin)
+            make.trailing.equalTo(self).inset(horizontalMargin)
         }
         
         inputTextField.snp.makeConstraints{ make in
