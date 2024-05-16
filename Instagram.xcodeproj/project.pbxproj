@@ -142,24 +142,10 @@
 		3606F2322BBBD5DB00561B0B /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				3606F2332BBBD61100561B0B /* LoginViewController.swift */,
-				3606F2342BBBD61100561B0B /* LoginViewController.xib */,
-				3606F23C2BBBE10000561B0B /* LoginTextView.swift */,
-				36EB2F452BC7BE160080361F /* LoginButton.swift */,
-				36651BC52BCFA463004B1AC6 /* JoinViewController.swift */,
-				36651BC62BCFA463004B1AC6 /* JoinViewController.xib */,
-				36D74A352BD23D630027A50E /* LoginViewAnimation.swift */,
-				36D74A372BD251680027A50E /* JoinViewModel.swift */,
-				36CA5FD82BD63F420080C29E /* PopUpViewController.swift */,
-				36CA5FD92BD63F420080C29E /* PopUpViewController.xib */,
-				36CA5FDC2BD647C80080C29E /* ActionTableViewCell.swift */,
-				369B4E7B2BD7A5E100CE24A0 /* LoginNavigationViewController.swift */,
-				36D52B722BD8D509009F0C12 /* LoginViewModel.swift */,
-				36D52B742BD8D5E1009F0C12 /* PopUpText.swift */,
-				3694C0B92BDB7FE300964852 /* VerificationPopUpViewController.swift */,
-				3694C0BA2BDB7FE300964852 /* VerificationPopUpViewController.xib */,
-				3694C0BD2BDB82FE00964852 /* VerificationPopUpTableViewCell.swift */,
-				36C2586A2BDF80E0002B92BC /* JoinVCLoadingView.swift */,
+				360FE1282BE2008700F08FB9 /* Supporting Views */,
+				360FE1272BE2005100F08FB9 /* Model */,
+				360FE1262BE2004000F08FB9 /* ViewModel */,
+				360FE1252BE2001C00F08FB9 /* ViewController */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -173,6 +159,59 @@
 				360CD7602BC3E8F30020A466 /* Font.swift */,
 			);
 			path = UIExtension;
+			sourceTree = "<group>";
+		};
+		360FE1252BE2001C00F08FB9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3694C0B92BDB7FE300964852 /* VerificationPopUpViewController.swift */,
+				3694C0BA2BDB7FE300964852 /* VerificationPopUpViewController.xib */,
+				36CA5FD82BD63F420080C29E /* PopUpViewController.swift */,
+				36CA5FD92BD63F420080C29E /* PopUpViewController.xib */,
+				36651BC52BCFA463004B1AC6 /* JoinViewController.swift */,
+				36651BC62BCFA463004B1AC6 /* JoinViewController.xib */,
+				3606F2332BBBD61100561B0B /* LoginViewController.swift */,
+				3606F2342BBBD61100561B0B /* LoginViewController.xib */,
+				369B4E7B2BD7A5E100CE24A0 /* LoginNavigationViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		360FE1262BE2004000F08FB9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				36D74A372BD251680027A50E /* JoinViewModel.swift */,
+				36D52B722BD8D509009F0C12 /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		360FE1272BE2005100F08FB9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				36D52B742BD8D5E1009F0C12 /* PopUpText.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		360FE1282BE2008700F08FB9 /* Supporting Views */ = {
+			isa = PBXGroup;
+			children = (
+				3606F23C2BBBE10000561B0B /* LoginTextView.swift */,
+				36EB2F452BC7BE160080361F /* LoginButton.swift */,
+				36D74A352BD23D630027A50E /* LoginViewAnimation.swift */,
+				36CA5FDC2BD647C80080C29E /* ActionTableViewCell.swift */,
+				3694C0BD2BDB82FE00964852 /* VerificationPopUpTableViewCell.swift */,
+				36C2586A2BDF80E0002B92BC /* JoinVCLoadingView.swift */,
+			);
+			path = "Supporting Views";
+			sourceTree = "<group>";
+		};
+		360FE1292BE2016B00F08FB9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		36A6F7412BB6979C00497207 = {
@@ -205,6 +244,7 @@
 				36A6F7562BB6979D00497207 /* Assets.xcassets */,
 				36A6F7582BB6979D00497207 /* LaunchScreen.storyboard */,
 				36A6F75B2BB6979D00497207 /* Info.plist */,
+				360FE1292BE2016B00F08FB9 /* Network */,
 				3606F2322BBBD5DB00561B0B /* Login */,
 				36A6F77D2BB6982800497207 /* Main */,
 				3606F2372BBBDFE800561B0B /* UIExtension */,
